@@ -7,12 +7,14 @@ import 'configuration/supabase.dart';
 import 'routes/main_route.dart';
 
 void main() async {
-  withHotreload(() => createSrever(),
-      onReloaded: () => prints(''),
-      onHotReloadNotAvailable: () => prints(''),
-      onHotReloadAvailable: () => prints(''),
-      onHotReloadLog: (log) => prints(''),
-      logLevel: Level.INFO);
+  // withHotreload(() => createSrever(),
+  //     onReloaded: () => prints(''),
+  //     onHotReloadNotAvailable: () => prints(''),
+  //     onHotReloadAvailable: () => prints(''),
+  //     onHotReloadLog: (log) => prints(''),
+  //     logLevel: Level.INFO);
+
+  await createSrever();
 }
 
 Future<HttpServer> createSrever() async {
